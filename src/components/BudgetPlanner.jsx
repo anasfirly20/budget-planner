@@ -7,6 +7,7 @@ import TableHeads from "./TableHeads";
 import Forms from "./Forms"; //main Forms
 import DatePicker from "./DatePicker";
 import { data } from "autoprefixer";
+import useLocalStrorage from "./LocalStorage";
 
 const BudgetPlanner = () => {
   // const [dataFood, setDataFood] = useState([
@@ -22,22 +23,24 @@ const BudgetPlanner = () => {
   // For food
   const [detailsFood, setDetailsFood] = useState("");
   const [dateFood, setDateFood] = useState("");
-  const [totalFood, setTotalFood] = useState(0);
+  const [totalFood, setTotalFood] = useLocalStrorage("totalFood", 0);
 
   // For Transportation
   const [detailstransport, setTransportDetails] = useState("");
   const [dateTransport, setDateTransport] = useState("");
-  const [totalTransport, setTotalTransport] = useState(0);
-
+  const [totalTransport, setTotalTransport] = useLocalStrorage(
+    "totalTransport",
+    0
+  );
   // for Housing
   const [detailsHousing, setHousingDetails] = useState("");
   const [dateHousing, setDateHousing] = useState("");
-  const [totalHousing, setTotalHousing] = useState(0);
+  const [totalHousing, setTotalHousing] = useLocalStrorage("totalHousing", 0);
 
   //
   const [detailsOthers, setOthersDetails] = useState("");
   const [dateOthers, setDateOthers] = useState("");
-  const [totalOthers, setTotalOthers] = useState(0);
+  const [totalOthers, setTotalOthers] = useLocalStrorage("totalOthers", 0);
 
   // last
   const [sumOfAll, setSumOfAll] = useState(0);
