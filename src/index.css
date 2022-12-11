@@ -9,3 +9,7 @@ body {
 .font-link {
   font-family: "Roboto Slab";
 }
+
+* {
+  scroll-behavior: smooth;
+}
