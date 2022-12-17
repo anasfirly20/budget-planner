@@ -19,7 +19,7 @@ const Intro = () => {
           loop
         />
         <button
-          className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black "
+          className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black hover:opacity-90 active:opacity-80"
           onClick={() => {
             window.scrollTo(0, document.body.scrollHeight);
           }}
